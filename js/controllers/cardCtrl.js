@@ -1,3 +1,20 @@
-/**
- * Created by tiigra on 8/30/16.
- */
+angular.module('app').controller('cardCtrl', function(cardFactory) {
+    
+    this.isEditing = false;
+    this.editingCard = null;
+    
+    this.deleteCard = function (card) {
+      cardFactory.deleteCard(card);
+    };
+    
+    this.editCard = function (card) {
+        this.isEditing = true;
+        this.editingCard = angular.copy(card);
+    }
+
+    this.updateCard = function () {
+        cardFactory.updateCard(this.editingCard);
+        this.isEditing = false;
+        this.editingCard = null;
+    };
+});

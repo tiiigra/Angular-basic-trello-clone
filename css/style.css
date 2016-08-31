@@ -38,7 +38,7 @@ input{
     position: relative;
 }
 
-.list h1{
+.list h2{
     font-size: 16px;
     font-weight: 700;
 }
@@ -49,6 +49,7 @@ input{
 
 .list.new-list{
     background-color: #628DA4;
+    padding-bottom: 20px;
 }
 
 .list-inline{
@@ -145,6 +146,11 @@ input.search{
 
 .select-list{
     margin: 10px 0 0 0;
+    padding: initial;
+    height: initial;
+    border-radius: 3px;
+    border: 1px solid #205c7e;
+    background-position: right 3px center;
 }
 
 .header-link{
